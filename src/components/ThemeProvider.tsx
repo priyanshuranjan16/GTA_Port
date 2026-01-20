@@ -82,7 +82,7 @@ function CheatNotification({ show, onComplete }: { show: boolean; onComplete: ()
                         initial={{ opacity: 0 }}
                         animate={{ opacity: [0, 1, 0] }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 z-[9998] bg-white pointer-events-none"
+                        className="fixed inset-0 z-9998 bg-white pointer-events-none"
                     />
 
                     {/* Confetti explosion */}
@@ -102,7 +102,7 @@ function CheatNotification({ show, onComplete }: { show: boolean; onComplete: ()
                             duration: 0.5,
                             ease: "easeOut",
                         }}
-                        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[10000] pointer-events-none"
+                        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10000 pointer-events-none"
                     >
                         <motion.div
                             animate={{
@@ -113,7 +113,7 @@ function CheatNotification({ show, onComplete }: { show: boolean; onComplete: ()
                                 ]
                             }}
                             transition={{ duration: 0.5, repeat: 3 }}
-                            className="px-8 py-6 bg-gradient-to-r from-[#FF1493] via-[#9400D3] to-[#00FFFF] rounded-xl text-center"
+                            className="px-8 py-6 bg-linear-to-r from-[#FF1493] via-[#9400D3] to-[#00FFFF] rounded-xl text-center"
                         >
                             <motion.div
                                 animate={{ scale: [1, 1.1, 1] }}
