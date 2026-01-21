@@ -1,0 +1,471 @@
+@import "tailwindcss";
+
+/* GTA Theme Colors */
+:root {
+  --gta-orange: #FF6B00;
+  --gta-yellow: #FFD700;
+  --gta-teal: #00CED1;
+  --gta-dark: #1a1a2e;
+  --gta-darker: #0f0f1a;
+  --gta-light: #ffffff;
+  --gta-gray: #2a2a4a;
+  --background: #0f0f1a;
+  --foreground: #ffffff;
+}
+
+/* Secret Vice City Theme - Unlocked with Konami Code */
+.secret-theme {
+  --gta-orange: #FF1493;
+  --gta-yellow: #00FFFF;
+  --gta-teal: #FF69B4;
+  --gta-dark: #1a0a2e;
+  --gta-darker: #0f051a;
+  --gta-gray: #2a1a4a;
+  --background: #0f051a;
+}
+
+.secret-theme body {
+  background: linear-gradient(135deg, #0f051a 0%, #1a0a2e 50%, #2a1040 100%) !important;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gta-orange: var(--gta-orange);
+  --color-gta-yellow: var(--gta-yellow);
+  --color-gta-teal: var(--gta-teal);
+  --color-gta-dark: var(--gta-dark);
+  --color-gta-darker: var(--gta-darker);
+  --color-gta-gray: var(--gta-gray);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: linear-gradient(135deg, var(--gta-darker) 0%, var(--gta-dark) 100%);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Enhanced GTA Text Shadow with 3D effect */
+.gta-text-shadow {
+  text-shadow:
+    4px 4px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 0 20px rgba(255, 107, 0, 0.5);
+}
+
+/* Glowing effects */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.5), 0 0 40px rgba(255, 107, 0, 0.3), 0 0 60px rgba(255, 107, 0, 0.1);
+}
+
+.glow-teal {
+  box-shadow: 0 0 20px rgba(0, 206, 209, 0.5), 0 0 40px rgba(0, 206, 209, 0.3);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.8), 0 0 20px rgba(255, 107, 0, 0.5), 0 0 40px rgba(255, 107, 0, 0.3);
+}
+
+.text-glow-teal {
+  text-shadow: 0 0 10px rgba(0, 206, 209, 0.8), 0 0 20px rgba(0, 206, 209, 0.5);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gta-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gta-orange), var(--gta-yellow));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gta-yellow);
+}
+
+/* Selection color */
+::selection {
+  background: var(--gta-orange);
+  color: white;
+}
+
+/* Animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+  }
+
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 40px rgba(255, 107, 0, 0.8);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--gta-orange);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animate-glitch:hover {
+  animation: glitch 0.3s ease infinite;
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--gta-orange);
+  animation: typewriter 3s steps(40) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Star rating */
+.star {
+  color: #333;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.star.active {
+  color: var(--gta-yellow);
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.9));
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+/* Mission passed animation */
+@keyframes mission-passed {
+  0% {
+    transform: scale(0.5) rotate(-10deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1) rotate(2deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.mission-passed {
+  animation: mission-passed 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Enhanced Card hover effect */
+.gta-card {
+  background: linear-gradient(145deg, rgba(42, 42, 74, 0.9), rgba(26, 26, 46, 0.95));
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.gta-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.gta-card:hover::before {
+  left: 100%;
+}
+
+.gta-card:hover {
+  border-color: var(--gta-orange);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255, 107, 0, 0.2), 0 0 0 1px rgba(255, 107, 0, 0.1);
+}
+
+/* Neon border animation */
+.neon-border {
+  position: relative;
+}
+
+.neon-border::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--gta-orange), var(--gta-yellow), var(--gta-teal), var(--gta-orange));
+  background-size: 400% 400%;
+  z-index: -1;
+  border-radius: inherit;
+  animation: gradient-shift 3s ease infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.neon-border:hover::after {
+  opacity: 1;
+}
+
+/* Glitch text effect */
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--gta-teal);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--gta-orange);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch 3s infinite linear alternate-reverse;
+}
+
+/* Scanlines overlay */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px,
+      transparent 2px);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+}
+
+/* CRT effect for secret theme */
+.secret-theme .crt-effect::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  animation: scanline 6s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Secret theme notification */
+@keyframes theme-unlock {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.theme-unlock-notification {
+  animation: theme-unlock 3s ease-in-out forwards;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, var(--gta-orange), var(--gta-yellow), var(--gta-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--gta-orange), #ff8533);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4);
+}
+
+/* Particle background */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--gta-orange);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: float 10s infinite ease-in-out;
+}
