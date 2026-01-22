@@ -20,7 +20,7 @@ export default function Projects() {
     return (
         <section id="projects" className="py-24 px-6 relative" ref={ref}>
             {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f0f1a]/50 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#0f0f1a]/50 to-transparent" />
 
             <div className="max-w-6xl mx-auto relative z-10">
                 {/* Section Title */}
