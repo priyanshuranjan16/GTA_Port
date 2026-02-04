@@ -54,7 +54,7 @@ export default function About() {
                     >
                         <div className="gta-card rounded-2xl p-8 relative overflow-hidden">
                             {/* Glowing border effect */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B00]/20 to-transparent opacity-50" />
+                            <div className="absolute inset-0 bg-linear-to-br from-[#FF6B00]/20 to-transparent opacity-50" />
 
                             {/* Wanted Stars - Animated */}
                             <div className="absolute top-4 right-4 flex gap-1">
@@ -82,7 +82,7 @@ export default function About() {
                                         ]
                                     }}
                                     transition={{ duration: 2, repeat: Infinity }}
-                                    className="w-full h-full rounded-full bg-gradient-to-br from-[#FF6B00] via-[#FFD700] to-[#FF6B00] flex items-center justify-center"
+                                    className="w-full h-full rounded-full bg-linear-to-br from-[#FF6B00] via-[#FFD700] to-[#FF6B00] flex items-center justify-center"
                                 >
                                     <span className="text-6xl">🎮</span>
                                 </motion.div>
@@ -155,7 +155,7 @@ export default function About() {
                                             <motion.div
                                                 animate={{ x: ["0%", "100%"] }}
                                                 transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                                                className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent"
                                                 style={{ width: "50%" }}
                                             />
                                         </motion.div>
