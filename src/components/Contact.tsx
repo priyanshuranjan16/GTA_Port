@@ -57,7 +57,7 @@ export default function Contact() {
         <section id="contact" className="py-24 px-6 relative bg-[#0f0f1a]/50" ref={ref}>
             {/* Background Effects */}
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF6B00]/5 rounded-full blur-3xl" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#FF6B00]/5 rounded-full blur-3xl" />
             </div>
 
             <div className="max-w-4xl mx-auto relative z-10">
@@ -87,7 +87,7 @@ export default function Contact() {
                         className="max-w-sm mx-auto"
                     >
                         {/* Phone Frame */}
-                        <div className="bg-gradient-to-b from-[#2a2a4a] to-[#1a1a2e] rounded-3xl p-6 border-4 border-[#3a3a5a] shadow-2xl">
+                        <div className="bg-linear-to-b from-[#2a2a4a] to-[#1a1a2e] rounded-3xl p-6 border-4 border-[#3a3a5a] shadow-2xl">
                             {/* Phone Header */}
                             <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
                                 <div className="flex items-center gap-2">
@@ -99,7 +99,7 @@ export default function Contact() {
 
                             {/* Contact Info */}
                             <div className="text-center mb-8">
-                                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#FF6B00] to-[#FFD700] flex items-center justify-center">
+                                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-linear-to-br from-[#FF6B00] to-[#FFD700] flex items-center justify-center">
                                     <span className="text-3xl">🎮</span>
                                 </div>
                                 <h3 className="text-xl font-bold text-white">{personalInfo.name}</h3>
