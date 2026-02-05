@@ -15,7 +15,7 @@ export default function Footer() {
                 <motion.div
                     initial={{ y: -100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    className="fixed top-20 left-1/2 -translate-x-1/2 z-50 px-6 py-3 bg-gradient-to-r from-[#FF1493] to-[#00FFFF] text-white font-bold rounded-lg shadow-2xl"
+                    className="fixed top-20 left-1/2 -translate-x-1/2 z-50 px-6 py-3 bg-linear-to-r from-[#FF1493] to-[#00FFFF] text-white font-bold rounded-lg shadow-2xl"
                 >
                     <span className="flex items-center gap-2">
                         🎮 CHEAT ACTIVATED: Vice City Theme Unlocked! 🌴
