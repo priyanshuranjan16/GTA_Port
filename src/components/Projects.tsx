@@ -92,7 +92,7 @@ export default function Projects() {
                             </div>
 
                             {/* Project Image/Thumbnail */}
-                            <div className="h-52 bg-gradient-to-br from-[#2a2a4a] to-[#1a1a2e] relative overflow-hidden">
+                            <div className="h-52 bg-linear-to-br from-[#2a2a4a] to-[#1a1a2e] relative overflow-hidden">
                                 {/* Pattern overlay */}
                                 <div
                                     className="absolute inset-0 opacity-10"
@@ -116,7 +116,7 @@ export default function Projects() {
                                 <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={hoveredId === project.id ? { opacity: 1 } : { opacity: 0 }}
-                                    className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent flex flex-col items-center justify-center p-6"
+                                    className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent flex flex-col items-center justify-center p-6"
                                 >
                                     <motion.div
                                         initial={{ y: 20, opacity: 0 }}
@@ -190,7 +190,7 @@ export default function Projects() {
                                         whileHover={{ scale: 1.03 }}
                                         whileTap={{ scale: 0.97 }}
                                         onClick={(e) => e.stopPropagation()}
-                                        className="flex-1 py-3 text-center text-sm font-bold text-white bg-gradient-to-r from-[#FF6B00] to-[#ff8533] rounded-lg hover:from-[#ff8533] hover:to-[#FF6B00] transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 py-3 text-center text-sm font-bold text-white bg-linear-to-r from-[#FF6B00] to-[#ff8533] rounded-lg hover:from-[#ff8533] hover:to-[#FF6B00] transition-all flex items-center justify-center gap-2"
                                     >
                                         <span>PLAY</span>
                                         <motion.span
