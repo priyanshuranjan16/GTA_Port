@@ -34,7 +34,7 @@ export default function Experience() {
                     className="relative"
                 >
                     {/* Timeline Line */}
-                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FF6B00] via-[#FFD700] to-[#00CED1] transform md:-translate-x-1/2" />
+                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-[#FF6B00] via-[#FFD700] to-[#00CED1] transform md:-translate-x-1/2" />
 
                     {experience.map((item, index) => (
                         <motion.div
